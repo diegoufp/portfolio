@@ -1,0 +1,38 @@
+{
+  "name": "portfolioweb",
+  "version": "1.0.0",
+  "description": "portafolio Web",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "server": "webpack serve  --mode development --open --port 3000"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Diego Fernandez <diegofernandezp001@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.4.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.4.0",
+    "mini-css-extract-plugin": "^2.4.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.3",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2"
+  }
+}
