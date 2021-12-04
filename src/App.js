@@ -3,14 +3,17 @@ import {HashRouter} from "react-router-dom";
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 const App = () => {
     return (
         <div>
             <HashRouter>
-                <Header/>
-                <Main/>
-                <Footer/>
+                <ThemeProvider>
+                    <Header/>
+                    <Main/>
+                    <Footer/>
+                </ThemeProvider>
             </HashRouter>
         </div>
     )

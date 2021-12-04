@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ThemeContext from '../contexts/ThemeContext';
 
 
 const Main = () => {
+    const {theme} = useContext(ThemeContext);
+
     return (
-        <div>
-            
-        </div>
+        <main className={theme}>
+
+        </main>
     )
 }
 
