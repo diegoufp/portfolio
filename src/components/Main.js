@@ -8,7 +8,6 @@ const Main = () => {
     const {texts} = useContext(LanguageContext);
     return (
         <main className={theme}>
-        {texts.language}
         </main>
     )
 }

@@ -8,11 +8,22 @@ const translations = {
     es:{
         language: "es", 
         themeDark: "Oscuro", 
-        themeLight: "Claro"},
+        themeLight: "Claro",
+        aboutMe: "Acerca de mi",
+        skills: "Habilidades",
+        portfolio: "Portafolio",
+        contact: "Contacto",
+        home: "Inicio"
+    },
     en:{
         language: "en",
         themeDark: "Dark", 
-        themeLight: "Light"
+        themeLight: "Light",
+        aboutMe: "About Me",
+        skills: "Skills",
+        portfolio: "Portfolio",
+        contact: "Contact",
+        home: "Home"
     }
 }
 
