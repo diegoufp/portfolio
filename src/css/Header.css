@@ -6,7 +6,8 @@
     align-items: center;
     justify-content:space-around;
     box-shadow: 0 1px 4px var(--shadow);
-    border-bottom: 1px solid var(--shadow)
+    border-bottom: 1px solid var(--shadow);
+    position: relative;
 }
 
 .header-style.light{
@@ -22,9 +23,8 @@
     height:100%;
     background: var(--rbg);
     top:0;
-    left:0;
     content: ' ';
-    filter: blur(10px);
+    filter: blur(6px);
     z-index:-1
 }
 

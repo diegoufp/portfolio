@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import LanguageContext from '../contexts/LanguageContext';
 import ThemeContext from '../contexts/ThemeContext';
+import "../css/Main.css";
 
 
 const Main = () => {
@@ -8,6 +9,8 @@ const Main = () => {
     const {texts} = useContext(LanguageContext);
     return (
         <main className={theme}>
+            <div>
+            </div>
         </main>
     )
 }

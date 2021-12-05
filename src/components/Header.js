@@ -8,7 +8,7 @@ const Header = () => {
     const {theme,handleTheme} = useContext(ThemeContext);
     const {texts, handleLanguage} = useContext(LanguageContext);
     return (
-        <header className={theme}>
+        <header>
         <div className={`header-style ${theme}`}>
             <div className="header-title"><h2>dufp</h2></div>
             <nav>
