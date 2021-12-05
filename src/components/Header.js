@@ -32,7 +32,18 @@ const Header = () => {
                 </ol>
             </nav>
             <div className="header-options">
-                <div className="header-options-theme">
+                <input className={`switch theme ${theme}`} type="checkbox" name="theme" id="dark-check" onClick={handleTheme}/>
+                <input className={`switch lang ${theme}`} type="checkbox" name="lang" id="lang-check" onClick={handleLanguage}/>
+            </div>
+        </div>
+        </header>
+    )
+}
+
+export default Header;
+
+/*
+<div className="header-options-theme">
                     <input type="radio" id="dark" name="theme" value="dark" onClick={handleTheme} defaultChecked={theme === "dark"}/>
                     <label htmlFor="dark">{texts.themeDark}</label>
                     <input type="radio" id="light" name="theme" onClick={handleTheme} value="light" defaultChecked={theme === "light"}/>
@@ -44,10 +55,4 @@ const Header = () => {
                     <input type="radio" id="en" name="language" value="en" onClick={handleLanguage} defaultChecked={texts.language === "en"}/>
                     <label htmlFor="en">en</label> 
                 </div>
-            </div>
-        </div>
-        </header>
-    )
-}
-
-export default Header;
+*/

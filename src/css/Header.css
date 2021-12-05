@@ -88,9 +88,9 @@ nav{
 .header-options {
     display: flex;
     position:relative;
-    width: 10%;
-    flex-direction: column;
-    justify-content: center;
+    width: 15%;
+    flex-direction: row;
+    justify-content:space-evenly;
     align-items: center;
 }
 
@@ -102,7 +102,56 @@ nav{
     font-size: 1.5rem;
 }
 
+.switch {
+    position: relative;
+    width: 6rem;
+    height: 3rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border-radius: 5rem;
+    transition: .5s;
+}
 
+.switch::after{
+    content: ' ';
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    top:0;
+    left:0;
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.switch.light::after{
+    background: var(--switch-back-light);
+    box-shadow: var(--switch-shadow-light)
+}
+
+.switch.dark::after{
+    background: var(--switch-back-dark);
+    box-shadow: var(--switch-shadow-dark);
+}
+
+.switch.light{
+    background: var(--dark);
+    box-shadow: var(--neum-shadow-dark);
+}
+
+.switch.dark{
+    background: var(--light);
+    box-shadow: var(--neum-shadow-light);
+}
+
+.switch.theme:checked::after{
+    left: 3rem;
+}
+
+.switch.lang:checked::after{
+    left: 3rem;
+}
 @media (max-width: 800px){
     
 }

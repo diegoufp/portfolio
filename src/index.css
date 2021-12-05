@@ -13,10 +13,16 @@
     --target: #0d0d10;
     --green: #00EEFE;
     --grey: #f5f5f5;
+    --switch-back-dark:linear-gradient(315deg, #0a0a0d, #08080b);
+    --switch-shadow-dark: -4px -4px 4px #040405,
+    1px 1px 2px #0e0e13;
+    --switch-back-light:linear-gradient(145deg, #e6e6e6, #ffffff);
+    --switch-shadow-light:-1px -1px 2px #d9d9d9,
+    1px 1px 2px #ffffff;
     --neum-shadow-light: inset 1px 1px 5px #666666,
     inset -1px -1px 5px #ffffff;
     --neum-shadow-dark:  inset 5px 5px 10px #040405,
-    inset -5px -5px 10px #0e0e13;
+    inset -5px -5px 10px #15151a;
     --back-space: linear-gradient(to bottom, #000000, #434343);
     --back-space-invert: linear-gradient(to bottom, #000000, #434343);
     --midnight: linear-gradient(to top, #232526, #414345);
