@@ -21,7 +21,7 @@
     position: absolute;
     width:100%;
     height:100%;
-    background: var(--rbg);
+    background: var(--rgb);
     top:0;
     content: ' ';
     filter: blur(6px);
@@ -113,8 +113,9 @@ nav{
     transition: .5s;
 }
 
+
 .switch::after{
-    content: ' ';
+    content: '';
     position: absolute;
     width: 3rem;
     height: 3rem;
@@ -127,7 +128,7 @@ nav{
 
 .switch.light::after{
     background: var(--switch-back-light);
-    box-shadow: var(--switch-shadow-light)
+    box-shadow: var(--switch-shadow-light);
 }
 
 .switch.dark::after{
@@ -136,22 +137,61 @@ nav{
 }
 
 .switch.light{
-    background: var(--dark);
-    box-shadow: var(--neum-shadow-dark);
+    background: var(--light);
+    box-shadow: var(--neum-shadow-light);
 }
 
 .switch.dark{
-    background: var(--light);
-    box-shadow: var(--neum-shadow-light);
+    background: var(--dark);
+    box-shadow: var(--neum-shadow-dark);
 }
 
 .switch.theme:checked::after{
     left: 3rem;
 }
 
+.switch.theme::before{
+    content: '🌙';
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.switch.theme:checked:before{
+    right: 3rem;
+    content: '🔆';
+
+}
+
 .switch.lang:checked::after{
     left: 3rem;
 }
+
+.switch.lang::before{
+    content: '🇪🇸';
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.switch.lang:checked:before{
+    right: 3rem;
+    content: '🇺🇸';
+
+}
+
 @media (max-width: 800px){
     
 }

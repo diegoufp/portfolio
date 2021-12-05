@@ -22,7 +22,7 @@
     position: absolute;
     width:100%;
     height:100%;
-    background: var(--rbg);
+    background: var(--rgb);
     bottom:0;
     content: ' ';
     filter: blur(6px);
