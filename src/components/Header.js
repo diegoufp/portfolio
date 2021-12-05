@@ -9,29 +9,25 @@ const Header = () => {
     const {texts, handleLanguage} = useContext(LanguageContext);
     return (
         <header className={theme}>
+        <div className={`header-style ${theme}`}>
             <div className="header-title"><h2>dufp</h2></div>
             <nav>
                 <ol className="nav-ol">
                     <li className="nav-li"> 
                         <a className={theme} href="#">{texts.home}
                         </a>
-                        <div className="efect-ligth"></div>
                     </li>
                     <li className="nav-li">
                         <a className={theme} href="#">{texts.aboutMe}</a>
-                        <div className="efect-ligth"></div>
                     </li>
                     <li className="nav-li">
                         <a className={theme} href="#">{texts.skills}</a>
-                        <div className="efect-ligth"></div>
                     </li>
                     <li className="nav-li">
                         <a className={theme} href="#">{texts.portfolio}</a>
-                        <div className="efect-ligth"></div>
                     </li>
                     <li className="nav-li">
                         <a className={theme} href="#">{texts.contact}</a>
-                        <div className="efect-ligth"></div>
                     </li>
                 </ol>
             </nav>
@@ -49,6 +45,7 @@ const Header = () => {
                     <label htmlFor="en">en</label> 
                 </div>
             </div>
+        </div>
         </header>
     )
 }
