@@ -1,7 +1,10 @@
 
 .header-style{
+    margin: auto;
     height: 100%;
     width: 100%;
+    max-width: 3100px;
+    min-height: 6rem;
     display: flex;
     align-items: center;
     justify-content:space-around;
@@ -44,7 +47,7 @@
 nav{
     position: relative;
     height: 100%;
-    width: 60%;
+    width: 65%;
 }
 
 .nav-ol{
@@ -69,7 +72,7 @@ nav{
 .nav-li a{
     margin:auto;
     display: flex;
-    height: 80%;
+    height: 75%;
     width: 90%;
     font-size: 1.6rem;
     justify-content: center;
@@ -88,7 +91,7 @@ nav{
 .header-options {
     display: flex;
     position:relative;
-    width: 15%;
+    width: 20%;
     flex-direction: row;
     justify-content:space-evenly;
     align-items: center;
@@ -122,7 +125,6 @@ nav{
     border-radius: 50%;
     top:0;
     left:0;
-    transform: scale(1.1);
     transition: .3s;
 }
 
@@ -192,8 +194,70 @@ nav{
 
 }
 
+.burger{
+    display:none;
+    position: fixed;
+    bottom: 8vh;
+    right: 5vw;
+    width: 5rem;
+    height: 5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border-radius: 50%;
+    transition: .5s;
+    justify-content: center;
+    align-items: center;
+}
+.burger.dark{
+    background: var(--switch-back-dark);
+    box-shadow: var(--switch-shadow-dark);
+}
+
+.burger.dark:checked{
+    background: var(--dark);
+    box-shadow: var(--neum-shadow-dark);
+}
+
+.burger.light{
+    background: var(--switch-back-light);
+    box-shadow: var(--switch-shadow-light);
+}
+
+.burger.light:checked{
+    background: var(--light);
+    box-shadow: var(--neum-shadow-light);
+}
+
+.burger::before,.burger::after{
+    content: ' ';
+    position:absolute;
+    width: 50%;
+    height: 8%;
+    border-radius: 20px;
+    transition: .6s;
+}
+.burger::after{
+    transform: rotate(90deg);
+}
+.burger:checked:after{
+    transform:rotate(-315deg);
+}
+.burger:checked:before{
+    transform:rotate(-405deg);
+}
+
+.burger.light::before,.burger.light::after{
+    background: var(--dark);
+}
+
+.burger.dark::before,.burger.dark::after{
+    background: var(--light);
+}
 @media (max-width: 800px){
-    
+    .burger{
+        display: flex;
+    }
 }
 
 @media (max-width: 400px){

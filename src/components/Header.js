@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import BurgerContext from '../contexts/BurgerContext';
 import LanguageContext from '../contexts/LanguageContext';
 import ThemeContext from '../contexts/ThemeContext';
 import "../css/Header.css";
@@ -7,6 +8,8 @@ import "../css/Header.css";
 const Header = () => {
     const {theme,handleTheme} = useContext(ThemeContext);
     const {texts, handleLanguage} = useContext(LanguageContext);
+    const {burger,handleBurger} = useContext(BurgerContext)
+
     return (
         <header>
         <div className={`header-style ${theme}`}>
@@ -31,6 +34,7 @@ const Header = () => {
                     </li>
                 </ol>
             </nav>
+            <input className={`burger ${theme}`}type="checkbox" name="burger" onClick={handleBurger}/>
             <div className="header-options">
                 <input className={`switch theme ${theme}`} type="checkbox" name="theme" id="dark-check" onClick={handleTheme}/>
                 <input className={`switch lang ${theme}`} type="checkbox" name="lang" id="lang-check" onClick={handleLanguage}/>
@@ -41,18 +45,3 @@ const Header = () => {
 }
 
 export default Header;
-
-/*
-<div className="header-options-theme">
-                    <input type="radio" id="dark" name="theme" value="dark" onClick={handleTheme} defaultChecked={theme === "dark"}/>
-                    <label htmlFor="dark">{texts.themeDark}</label>
-                    <input type="radio" id="light" name="theme" onClick={handleTheme} value="light" defaultChecked={theme === "light"}/>
-                    <label htmlFor="light">{texts.themeLight}</label>
-                </div>
-                <div className="header-options-lang">
-                    <input type="radio" id="es" name="language" value="es" onClick={handleLanguage} defaultChecked={texts.language === "es"}/>
-                    <label htmlFor="es">es</label> 
-                    <input type="radio" id="en" name="language" value="en" onClick={handleLanguage} defaultChecked={texts.language === "en"}/>
-                    <label htmlFor="en">en</label> 
-                </div>
-*/

@@ -1,6 +1,8 @@
 .footer-style{
+    margin:auto;
     height: 100%;
     width: 100%;
+    max-width: 3100px;
     position: relative;
     display: flex;
     align-items: center;
