@@ -1,0 +1,7 @@
+main.dark{
+    background: var(--dark);
+}
+
+main.light {
+    background: var(--light));
+}
