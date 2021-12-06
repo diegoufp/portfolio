@@ -47,7 +47,7 @@
 nav{
     position: relative;
     height: 100%;
-    width: 65%;
+    width: 70%;
 }
 
 .nav-ol{
@@ -65,19 +65,19 @@ nav{
     position: relative;
     flex-direction: column;
     height: 100%;
-    width: 16%;
-    align-items: center;
+    width: 18%;
 }
 
 .nav-li a{
     margin:auto;
     display: flex;
     height: 75%;
-    width: 90%;
+    width: 100%;
     font-size: 1.6rem;
     justify-content: center;
     align-items: center;
     border-radius: 5rem;
+    align-items: center;
 }
 .nav-li a.dark:hover{
     box-shadow: var(--neum-shadow-dark);
@@ -255,11 +255,74 @@ nav{
     background: var(--light);
 }
 @media (max-width: 800px){
+    nav{
+        position: fixed;
+        top:0;
+        left:0;
+        width: 50vw;
+        height: 100vh;
+        transition: transform .5s;
+    }
+    nav.unactivate{
+        transform: translateX(-100%);
+    }
+
+    .nav-ol{
+        flex-direction: column;
+        
+    }
+
+    .nav-ol.active{
+        box-shadow: 0 1px 4px var(--shadow);
+        border-right: 1px solid var(--shadow);
+    }
+    .nav-ol::after{
+        background: var(--rgb0);
+        position: absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        content: ' ';
+        filter: blur(6px);
+        z-index:-1;
+        transition:opacity .5s linear;
+    }
+
+    .nav-ol.unactivate::after{
+        opacity:0;
+    }
+    .nav-ol.activate::after{
+        opacity: 1;
+    }
+
+    .nav-ol.light{
+        background: var(--light);
+    }
+
+    .nav-ol.dark{
+        background: var(--dark);
+    }
+
+    .nav-li{
+        width: 40%;
+        height:15%;
+
+    }
+
     .burger{
         display: flex;
     }
+    .header-options {
+        width: 50%;
+        justify-content:space-evenly;
+    }
+    
 }
 
 @media (max-width: 400px){
-    
+    nav{
+        width: 100vw;
+        height: 100vh;
+    }
+
 }

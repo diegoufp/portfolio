@@ -14,8 +14,8 @@ const Header = () => {
         <header>
         <div className={`header-style ${theme}`}>
             <div className="header-title"><h2>dufp</h2></div>
-            <nav>
-                <ol className="nav-ol">
+            <nav className={burger}>
+                <ol className={`nav-ol ${theme} ${burger}`}>
                     <li className="nav-li"> 
                         <a className={theme} href="#">{texts.home}
                         </a>
