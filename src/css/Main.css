@@ -3,5 +3,15 @@ main.dark{
 }
 
 main.light {
-    background: var(--light));
+    background: var(--light);
+}
+
+main{
+    display: flex;
+    padding: 1rem;
+    max-width: 3100px;
+}
+
+main *{
+    font-family: 'Raleway', sans-serif;
 }

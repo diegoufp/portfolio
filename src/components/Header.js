@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link} from "react-router-dom";
 import BurgerContext from '../contexts/BurgerContext';
 import LanguageContext from '../contexts/LanguageContext';
 import ThemeContext from '../contexts/ThemeContext';
@@ -17,20 +18,20 @@ const Header = () => {
             <nav className={burger}>
                 <ol className={`nav-ol ${theme} ${burger}`}>
                     <li className="nav-li"> 
-                        <a className={theme} href="#">{texts.home}
-                        </a>
+                        <Link className={theme} to="/">{texts.home}
+                        </Link>
                     </li>
                     <li className="nav-li">
-                        <a className={theme} href="#">{texts.aboutMe}</a>
+                        <Link className={theme} to="/about_me">{texts.aboutMe}</Link>
                     </li>
                     <li className="nav-li">
-                        <a className={theme} href="#">{texts.skills}</a>
+                        <Link className={theme} to="/skills">{texts.skills}</Link>
                     </li>
                     <li className="nav-li">
-                        <a className={theme} href="#">{texts.portfolio}</a>
+                        <Link className={theme} to="/portfolio">{texts.portfolio}</Link>
                     </li>
                     <li className="nav-li">
-                        <a className={theme} href="#">{texts.contact}</a>
+                        <Link className={theme} to="/contact">{texts.contact}</Link>
                     </li>
                 </ol>
             </nav>

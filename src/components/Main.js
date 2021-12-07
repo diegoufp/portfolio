@@ -1,7 +1,17 @@
 import React, { useContext } from 'react';
 import LanguageContext from '../contexts/LanguageContext';
 import ThemeContext from '../contexts/ThemeContext';
+import { Routes,Route} from "react-router-dom";
 import "../css/Main.css";
+import Home from '../pages/Home';
+import AboutMe from '../pages/AboutMe';
+import Skills from '../pages/Skills';
+import Portfolio from '../pages/Portfolio';
+import Contact from '../pages/Contact';
+import Error404 from '../pages/Error404';
+
+
+
 
 
 const Main = () => {
@@ -9,8 +19,14 @@ const Main = () => {
     const {texts} = useContext(LanguageContext);
     return (
         <main className={theme}>
-            <div>
-            </div>
+                <Routes>
+                    <Route exact path="/" element={<Home/>}/>
+                    <Route exact path="/about_me" element={<AboutMe/>}/>
+                    <Route exact path="/skills" element={<Skills/>} />
+                    <Route exact path="/portfolio" element={<Portfolio/>}/>
+                    <Route exact path="/contact" element={<Contact/>}/>
+                    <Route path="*" element={<Error404/>}/>
+                </Routes>
         </main>
     )
 }
