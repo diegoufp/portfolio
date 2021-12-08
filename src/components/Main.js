@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import LanguageContext from '../contexts/LanguageContext';
 import ThemeContext from '../contexts/ThemeContext';
 import { Routes,Route} from "react-router-dom";
 import "../css/Main.css";
@@ -16,7 +15,6 @@ import Error404 from '../pages/Error404';
 
 const Main = () => {
     const {theme} = useContext(ThemeContext);
-    const {texts} = useContext(LanguageContext);
     return (
         <main className={theme}>
                 <Routes>

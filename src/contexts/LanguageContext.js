@@ -13,7 +13,10 @@ const translations = {
         skills: "Habilidades",
         portfolio: "Portafolio",
         contact: "Contacto",
-        home: "Inicio"
+        home: "Inicio",
+        presentation:"Soy freelancer, apasionado por la tecnología, tengo más de tres años como desarrollador e incluso actualmente continúo expandiendo mi conocimiento sobre nuevas tecnologías de forma autodidacta",
+        name:"Soy Diego Fernandez",
+        stand: "Full Stack Developer"
     },
     en:{
         language: "en",
@@ -23,7 +26,11 @@ const translations = {
         skills: "Skills",
         portfolio: "Portfolio",
         contact: "Contact",
-        home: "Home"
+        home: "Home",
+        presentation: "I am a freelancer, passionate about technology, I have more than three years as a developer and even currently I continue to expand my knowledge about new technologies autodidactically",
+        name: "I'm Diego Fernandez",
+        stand: "Full Stack Developer"
+
     }
 }
 

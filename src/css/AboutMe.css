@@ -1,0 +1,97 @@
+.main__aboutme{
+    display: flex;
+    position: relative;
+    height: 100vh; 
+    width: 100%;
+    max-width: 3100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__aboutme{
+    display: flex;
+    position: relative;
+    height: 90vh; 
+    width: 100%;
+    max-width: 3100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__aboutme-information{
+    margin: auto;
+    display: flex;
+    position: relative;
+    height: 70%;
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    top: -2rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px var(--shadow);
+    border: 1px solid var(--shadow);
+    padding: 3rem 0 2rem 0;
+}
+
+.main__aboutme-information.dark{
+    background: var(--dark);
+}
+.main__aboutme-information.light{
+    background: var(--light);
+}
+
+.main__aboutme-information::after{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: var(--rgb45);
+    top:0;
+    content: ' ';
+    filter: blur(6px);
+    z-index:-1
+}
+
+
+.main__aboutme-information h1{
+    display:flex;
+    font-size: 3.5rem;
+    font-weight: 500;
+    opacity: .8;
+    width: 100%;
+    height:20%
+}
+
+.main__aboutme-information h3{
+    width: 90%;
+    text-align: justify;
+    height: 50%;
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.main__aboutme-information p{
+    font-size: 1.5rem;
+    opacity: .7;
+}
+
+@keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    25% { opacity: 0.0; }
+    50% { opacity: 0.0; }
+    75% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+.main__aboutme-information span{
+    font-size: 4rem;
+    font-weight: 300;
+    animation-name: parpadeo;
+    animation-duration: 1.1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 800px){}
+
+@media (max-width: 450px){}
