@@ -10,7 +10,7 @@ const AboutMe = () => {
     return (
         <div className="main__aboutme">
             <div className={`main__aboutme-information ${theme}`}>
-                <h1>{texts.name}<span>|</span></h1>
+                <h1>{texts.name}</h1>
                 <p>-{texts.stand}-</p>
                 <h3>{texts.presentation}</h3>
             </div>
