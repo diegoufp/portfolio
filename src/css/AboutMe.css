@@ -8,15 +8,6 @@
     align-items: center;
 }
 
-.main__aboutme{
-    display: flex;
-    position: relative;
-    height: 90vh; 
-    width: 100%;
-    max-width: 3100px;
-    justify-content: center;
-    align-items: center;
-}
 
 .main__aboutme-information{
     margin: auto;

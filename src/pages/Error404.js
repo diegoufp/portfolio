@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "../css/Error404.css";
 
 const Error404 = () => {
     return (
