@@ -1,7 +1,8 @@
 .main__skills{
     display: flex;
     position: relative;
-    height: 100vh; 
+    height: auto;
+    min-height: 100vh; 
     width: 100%;
     max-width: 3100px;
     justify-content: center;
@@ -12,14 +13,11 @@
     margin: auto;
     display: flex;
     position: relative;
-    height: 70%;
+    height: 90%;
     width: 90%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    top: -2rem;
-    border-radius: 5px;
-    padding: 3rem 0 2rem 0;
 }
 
 .main__skills-information.dark{
@@ -28,44 +26,34 @@
 .main__skills-information.light{
     background: var(--light);
 }
-/*
-.main__skills-information::after{
-    position: absolute;
-    width:100%;
-    height:100%;
-    background: var(--rgb45);
-    top:0;
-    content: ' ';
-    filter: blur(6px);
-    z-index:-1
-}*/
 
 .main__skills-title{
+    width: 100%;
+    height: 20%;
     display: flex;
-    width:100%;
     justify-content: center;
     align-items: center;
-    height: 15%;
 }
 
+
 .main__skills-title h2{
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 400;
     opacity: .8;
     text-align: center;
+    bottom: 10rem;
 }
 
 .main__skills-cards{
     position:relative;
     display: grid;
-    width:100%;
+    width:60%;
     height: 80%;
-    gap: 2rem;
+    gap: 3rem;
     padding: 2rem;
     justify-content: space-around;
     align-items: center;
-    grid-auto-flow: column dense;
+    grid-template-rows: repeat(13rem);
+    grid-template-columns: repeat(auto-fill,13rem);
+    grid-auto-flow: row dense;
 }
-
-@media (max-width: 800px){}
-@media (max-width: 450px){}

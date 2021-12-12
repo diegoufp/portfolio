@@ -8,7 +8,7 @@ const Card = ({img, title}) => {
     return (
         <section className="card">
             <figure className={theme}>
-                <img src={img} alt={title}/>
+                <img className={theme} src={img} alt={title} loading="lazy"/>
                 <figcaption>{title}</figcaption>
             </figure>
         </section>

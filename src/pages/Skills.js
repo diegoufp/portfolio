@@ -6,7 +6,7 @@ import Card from '../components/Card';
 
 const Skills = () => {
     const {theme} = useContext(ThemeContext);
-    const {texts} = useContext(LanguageContext);
+    const {texts,icons} = useContext(LanguageContext);
     return (
         <div className="main__skills">
             <div className={`main__skills-information ${theme}`}>
@@ -14,9 +14,14 @@ const Skills = () => {
                     <h2>{texts.skills}</h2>
                 </div>
                 <div className="main__skills-cards">
-                    <Card img="https://quantumworks.co.uk/wp-content/uploads/2021/09/svgexport-1.svg" title="PANCAKESWAP" />
-                    <Card img="https://quantumworks.co.uk/wp-content/uploads/2021/09/booged.png" title="BOGGED"  />
-                    <Card  img="https://quantumworks.co.uk/wp-content/uploads/2021/09/dextools.png" title="CHART" />
+                    <Card img={icons.github.img} title={icons.github.title}/>
+                    <Card img={icons.linux.img} title={icons.linux.title}/>
+                    <Card  img={icons.sql.img} title={icons.sql.title}/>
+                    <Card img={icons.pandas.img} title={icons.pandas.title}/>
+                    <Card img={icons.html.img} title={icons.html.title}/>
+                    <Card img={icons.css.img} title={icons.css.title}/>
+                    <Card img={icons.javascript.img} title={icons.javascript.title}/>
+                    <Card img={icons.python.img} title={icons.python.title}/>
                 </div>
             </div>
         </div>

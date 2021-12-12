@@ -34,6 +34,41 @@ const translations = {
     }
 }
 
+const icons = {
+    github: {
+        img: "../../public/icons/github.png",
+        title: "GITHUB"
+    },
+    javascript: {
+        img: "../../public/icons/javascript.png",
+        title: "JAVASCRIPT"
+    },
+    python: {
+        img: "../../public/icons/py.png",
+        title: "PYTHON"
+    },
+    linux: {
+        img: "../../public/icons/linux.png",
+        title: "LINUX"
+    },
+    sql: {
+        img: "../../public/icons/sql.png",
+        title: "SQL"
+    },
+    pandas: {
+        img: "../../public/icons/pandas.png",
+        title: "PANDAS"
+    },
+    html: {
+        img: "../../public/icons/html.png",
+        title: "HTML"
+    },
+    css: {
+        img: "../../public/icons/css-3.png",
+        title: "CSS"
+    }
+}
+
 const LanguageProvider = ({children})=>{
     const [language, setLanguage] = useState(initialLanguage);
     const [texts,setTexts] = useState(translations[language]);
@@ -47,7 +82,7 @@ const LanguageProvider = ({children})=>{
             setTexts(translations.en);
         }
     };
-    const data={texts,handleLanguage};
+    const data={texts,handleLanguage, icons};
     return (
         <LanguageContext.Provider value={data}>
         {children}

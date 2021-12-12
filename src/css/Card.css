@@ -40,12 +40,21 @@
 }
 .card img{
     padding: 1rem;
+    height: auto;
+    border-radius: 5px;
+    opacity: 0.9;
+    object-fit: cover;
+}
+
+
+.card img.dark{
+    filter: invert(100%)
 }
 
 .card figcaption{
     font-size: 1.5rem;
     font-weight: 200;
-    text-align: center
+    text-align: center;
 }
 
 @media (max-width: 800px){}
