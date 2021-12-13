@@ -46,10 +46,10 @@
     object-fit: cover;
 }
 
-
+/*
 .card img.dark{
     filter: invert(100%)
-}
+}*/
 
 .card figcaption{
     font-size: 1.5rem;

@@ -17,11 +17,16 @@ const Skills = () => {
                     <Card img={icons.github.img} title={icons.github.title}/>
                     <Card img={icons.linux.img} title={icons.linux.title}/>
                     <Card  img={icons.sql.img} title={icons.sql.title}/>
-                    <Card img={icons.pandas.img} title={icons.pandas.title}/>
                     <Card img={icons.html.img} title={icons.html.title}/>
                     <Card img={icons.css.img} title={icons.css.title}/>
                     <Card img={icons.javascript.img} title={icons.javascript.title}/>
                     <Card img={icons.python.img} title={icons.python.title}/>
+                    <Card img={icons.react.img} title={icons.react.title}/>
+                    {/*<Card img={icons.mongo.img} title={icons.mongo.title}/>*/}
+                    <Card img={icons.sass.img} title={icons.sass.title}/>
+                    <Card img={icons.node.img} title={icons.node.title}/>
+                    <Card img={icons.docker.img} title={icons.docker.title}/>
+                    <Card img={icons.git.img} title={icons.git.title}/>
                 </div>
             </div>
         </div>

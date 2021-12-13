@@ -36,23 +36,23 @@ const translations = {
 
 const icons = {
     github: {
-        img: "../../public/icons/github.png",
+        img: "../../public/icons/githubN.png",
         title: "GITHUB"
     },
     javascript: {
-        img: "../../public/icons/javascript.png",
+        img: "../../public/icons/js.png",
         title: "JAVASCRIPT"
     },
     python: {
-        img: "../../public/icons/py.png",
+        img: "../../public/icons/PY.png",
         title: "PYTHON"
     },
     linux: {
-        img: "../../public/icons/linux.png",
+        img: "../../public/icons/LINUX.png",
         title: "LINUX"
     },
     sql: {
-        img: "../../public/icons/sql.png",
+        img: "../../public/icons/sqlserver.png",
         title: "SQL"
     },
     pandas: {
@@ -60,12 +60,36 @@ const icons = {
         title: "PANDAS"
     },
     html: {
-        img: "../../public/icons/html.png",
+        img: "../../public/icons/html5.png",
         title: "HTML"
     },
     css: {
-        img: "../../public/icons/css-3.png",
+        img: "../../public/icons/css.png",
         title: "CSS"
+    },
+    react: {
+        img: "../../public/icons/REACT.png",
+        title: "REACT"
+    },
+    node: {
+        img:"../../public/icons/NODE.png",
+        title:"NODE"
+    },
+    git: {
+        img:"../../public/icons/GITT.png",
+        title:"GIT"
+    },
+    docker: {
+        img:"../../public/icons/DOCKERINV.png",
+        title:"DOCKER"
+    },
+    sass: {
+        img:"../../public/icons/SAS.png",
+        title:"SASS"
+    },
+    mongo: {
+        img:"../../public/icons/MONGO.png",
+        title:"MONGO"
     }
 }
 
