@@ -16,7 +16,8 @@ const translations = {
         home: "Inicio",
         presentation:"Soy freelancer, apasionado por la tecnología, tengo más de tres años como desarrollador e incluso actualmente continúo expandiendo mi conocimiento sobre nuevas tecnologías de forma autodidacta",
         name:"Soy Diego Fernandez",
-        stand: "Full Stack Developer"
+        stand: "Full Stack Developer",
+
     },
     en:{
         language: "en",
@@ -32,6 +33,37 @@ const translations = {
         stand: "Full Stack Developer"
 
     }
+}
+
+const slider = {
+    es:{
+        0:  {img:"0",
+            title:"es",
+            text:"es"},
+        1:  {img:"1",
+            title:"es",
+            text:"es"},
+        2:  {img:"2",
+            title:"es",
+            text:"es"},
+        3:  {img:"3",
+            title:"es",
+            text:"es"}
+    },
+    en:{
+    0:  {img:"0",
+        title:"en",
+        text:"en"},
+    1:  {img:"1",
+        title:"en",
+        text:"en"},
+    2:  {img:"2",
+        title:"en",
+        text:"en"},
+    3:  {img:"3",
+        title:"en",
+        text:"en"}
+    },
 }
 
 const icons = {
@@ -96,17 +128,21 @@ const icons = {
 const LanguageProvider = ({children})=>{
     const [language, setLanguage] = useState(initialLanguage);
     const [texts,setTexts] = useState(translations[language]);
+    const [sliderTexts, setSliderText] = useState(slider[language])
 
     const handleLanguage = (e) =>{
         if(e.target.checked){
             setLanguage("es");
             setTexts(translations.es);
+            setSliderText(slider.es);
+
         }else{
             setLanguage("en");
             setTexts(translations.en);
+            setSliderText(slider.en);
         }
     };
-    const data={texts,handleLanguage, icons};
+    const data={texts,handleLanguage, icons, sliderTexts};
     return (
         <LanguageContext.Provider value={data}>
         {children}

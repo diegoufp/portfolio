@@ -9,7 +9,7 @@ const Skills = () => {
     const {texts,icons} = useContext(LanguageContext);
     return (
         <div className="main__skills">
-            <div className={`main__skills-information ${theme}`}>
+            <div className="main__skills-information">
                 <div className="main__skills-title">
                     <h2>{texts.skills}</h2>
                 </div>
