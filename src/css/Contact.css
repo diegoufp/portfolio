@@ -1,2 +1,102 @@
+.main__contact{
+    display: flex;
+    position: relative;
+    height: 100vh; 
+    width: 100%;
+    max-width: 3100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__contact-content{
+    margin: auto;
+    display: flex;
+    position: relative;
+    height:auto;
+    max-height: 600px;
+    max-width: 300px;
+    width: 40%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px var(--shadow);
+    border: 1px solid var(--shadow);
+    padding: 3rem 0 2rem 0;
+}
+
+.main__contact-content.light{
+    background: var(--light);
+}
+
+.main__contact-content.dark{
+    background: var(--dark);
+}
+
+.main__contact-content::after{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: var(--rgb45);
+    top:0;
+    content: ' ';
+    filter: blur(6px);
+    z-index:-1
+}
+
+.main__contact-content h2{
+    font-size: 3rem;
+    font-weight: 400;
+    opacity: .8;
+    text-align: center;
+    bottom: 10rem;
+}
+
+.main__contact-content form {
+    position: relative;
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.main__contact-content form input, .main__contact-content form textarea{
+    border-radius: 3px;
+    border: none;
+    background:  none;
+    text-align: center;
+}
+
+.main__contact-content form .light,
+.main__contact-content form input[type="submit"].light:hover{
+    box-shadow: var(--neum-shadow-light);
+}
+
+.main__contact-content form ::placeholder{
+    opacity: .6;
+}
+
+.main__contact-content form .light::placeholder{
+    color:var(--dark)
+}
+
+.main__contact-content form .dark,
+.main__contact-content form input[type="submit"].dark:hover{
+    box-shadow: var(--neum-shadow-dark);
+}
+
+.main__contact-content form .dark::placeholder{
+    color:var(--light)
+}
+
+.main__contact-content form input[type="submit"].light{
+    background: var(--switch-back-light);
+    box-shadow: var(--switch-shadow-light);
+}
+
+.main__contact-content form input[type="submit"].dark{
+    background: var(--switch-back-dark);
+    box-shadow: var(--switch-shadow-dark);
+}
+
 @media (max-width: 800px){}
 @media (max-width: 450px){}
