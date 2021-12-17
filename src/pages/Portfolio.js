@@ -4,19 +4,22 @@ import LanguageContext from '../contexts/LanguageContext';
 import { useSlider } from '../hooks/useSlider';
 
 const Portfolio = () => {
-    const {sliderTexts} = useContext(LanguageContext);
+    const {sliderTexts,texts} = useContext(LanguageContext);
     const {slider,handleSlider} = useSlider(Object.values(sliderTexts).length);
 
-    console.log(sliderTexts[slider])
 
     return (
         <div className="main__portfolio">
             <div className="main__portfolio-slider">
             <div className="main__portfolio-information">
                 <figure>
-                    <img />
+                    <img src={sliderTexts[slider].img} title={sliderTexts[slider].title}/>
                 </figure>
-                <div className="main__portfolio-text"></div>
+                <div className="main__portfolio-text">
+                    <h3>{sliderTexts[slider].title}</h3>
+                    <p>{sliderTexts[slider].text}</p>
+                    <a href={sliderTexts[slider].git} target="_blank">{texts.more}</a>
+                </div>
             </div>
             <button id="left" value="left" onClick={handleSlider}/>
             <button id="right" value="right" onClick={handleSlider}/>
