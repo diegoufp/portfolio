@@ -59,44 +59,65 @@
     gap: 1rem;
 }
 
-.main__contact-content form input, .main__contact-content form textarea{
+.main__contact-content form p{
+    font-size: 1.2rem;
+    opacity: .9;
+    text-align: center;
+    background: var(--rgb-lite);
+    border-radius: 3px;
+    color: var(--dark)
+}
+
+.text{
+    height: 2.5rem;
+}
+
+.textarea{
+    resize: none;
+}
+
+.text, .textarea ,.submit{
     border-radius: 3px;
     border: none;
     background:  none;
+    outline: none;
     text-align: center;
 }
-
-.main__contact-content form .light,
-.main__contact-content form input[type="submit"].light:hover{
-    box-shadow: var(--neum-shadow-light);
+.text::placeholder, .textarea::placeholder{
+   font-size: 1.5rem;
 }
 
-.main__contact-content form ::placeholder{
-    opacity: .6;
+.text.light ,.textarea.light{
+    box-shadow: 2px 2px 5px var(--shadow-light1),
+    1px 1px 2px var(--shadow-light2);
+    border: .5px solid var(--shadow);
 }
 
-.main__contact-content form .light::placeholder{
-    color:var(--dark)
+.text.dark ,.textarea.dark{
+    box-shadow: 2px 2px 5px var(--shadow-dark1),
+    1px 1px 2px var(--shadow-dark2);
+    border: .5px solid var(--shadow);
 }
 
-.main__contact-content form .dark,
-.main__contact-content form input[type="submit"].dark:hover{
-    box-shadow: var(--neum-shadow-dark);
+.submit{
+    border: .5px solid var(--shadow);
+    background: var(--rgb-lite);
+    font-size: 1.8rem;
+    color: var(--dark);
 }
 
-.main__contact-content form .dark::placeholder{
-    color:var(--light)
+.submit.light{
+    box-shadow: 5px 5px 10px var(--shadow-light1);
+}
+.submit.dark{
+    box-shadow: 5px 5px 10px var(--shadow-dark1);
 }
 
-.main__contact-content form input[type="submit"].light{
-    background: var(--switch-back-light);
-    box-shadow: var(--switch-shadow-light);
+.submit:active {
+    box-shadow: none;
 }
 
-.main__contact-content form input[type="submit"].dark{
-    background: var(--switch-back-dark);
-    box-shadow: var(--switch-shadow-dark);
-}
+
 
 @media (max-width: 800px){}
 @media (max-width: 450px){}

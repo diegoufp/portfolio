@@ -15,19 +15,19 @@ const Contact = () => {
             <div className={`main__contact-content ${theme}`}>
                 <h2>{texts.contact}</h2>
                 <form onSubmit={handleSubmit}>
-                <input className={theme} type="text" name="name" placeholder={formText.placeholder.name} onBlur={handleBlur} onChange={handleChange} value={form.name} required/>
+                <input className={`text ${theme}`}  type="text" name="name" placeholder={formText.placeholder.name} onBlur={handleBlur} onChange={handleChange} value={form.name} required/>
                 {(errors.name === "regex" && <p>{formText.regex.name}</p>)||(errors.name && <p>{formText.required.name}</p>)}
 
-                <input className={theme} type="email" name="email" placeholder={formText.placeholder.email} onBlur={handleBlur} onChange={handleChange} value={form.email} required/>
+                <input className={`text ${theme}`}  type="email" name="email" placeholder={formText.placeholder.email} onBlur={handleBlur} onChange={handleChange} value={form.email} required/>
                 {(errors.email === "regex" && <p>{formText.regex.email}</p>)||(errors.email && <p>{formText.required.email}</p>)}
 
-                <input className={theme} type="text" name="subject" placeholder={formText.placeholder.subject} onBlur={handleBlur} onChange={handleChange} value={form.subject} required/>
+                <input className={`text ${theme}`} type="text" name="subject" placeholder={formText.placeholder.subject} onBlur={handleBlur} onChange={handleChange} value={form.subject} required/>
                 {errors.subject && <p>{formText.required.subject}</p>}
 
-                <textarea className={theme} name="comments" cols="50" rows="5" placeholder={formText.placeholder.comments} onBlur={handleBlur} onChange={handleChange} value={form.comments} required></textarea>
+                <textarea className={`textarea ${theme}`} name="comments" cols="50" rows="5" placeholder={formText.placeholder.comments} onBlur={handleBlur} onChange={handleChange} value={form.comments} required></textarea>
                 {(errors.comments === "regex" && <p>{formText.regex.comments}</p>)||(errors.comments && <p>{formText.required.comments}</p>)}
 
-                <input className={theme} type="submit" value={formText.placeholder.submit}/>
+                <input className={`submit ${theme}`} type="submit" value={formText.placeholder.submit}/>
                 </form>
             </div>
         </div>

@@ -13,12 +13,13 @@
 :root {
     --dark: #09090C;
     --light: #ffffff;
-    --target: #0d0d10;
-    --green: #00EEFE;
-    --grey: #f5f5f5;
     --switch-back-dark:linear-gradient(315deg, #0a0a0d, #08080b);
-    --switch-shadow-dark: -3px -3px 5px #040405,
+    --switch-shadow-dark: -2px -2px 5px #040405,
     3px 3px 5px #0e0e13;
+    --shadow-dark1: #040405;
+    --shadow-dark2: #0000009f;
+    --shadow-light1: #d9d9d9;
+    --shadow-light2: #e6e6e6;
     --switch-back-light:linear-gradient(145deg, #e6e6e6, #ffffff);
     --switch-shadow-light:-2px -2px 5px #d9d9d9,
     3px 3px 5px #ffffff;
@@ -26,17 +27,18 @@
     inset -1px -1px 5px #ffffff;
     --neum-shadow-dark:  inset 5px 5px 10px #040405,
     inset -5px -5px 10px #15151a;
-    --back-space: linear-gradient(to bottom, #000000, #434343);
-    --back-space-invert: linear-gradient(to bottom, #000000, #434343);
-    --midnight: linear-gradient(to top, #232526, #414345);
-    --hazel: linear-gradient(to left, #77a1d3, #79cbca, #e684ae);
     --shadow: rgb(0 0 0 / 22%);
     --border: #f3f3f3;
     --rgb: linear-gradient(90deg, rgba(255,252,0,1) 0%, rgba(189,255,0,1) 10%, rgba(27,255,0,1) 20%, rgba(0,255,72,1) 30%, rgba(0,255,226,1) 40%, rgba(26,200,255,1) 50%, rgba(0,1,250,1) 60%, rgba(85,0,255,1) 70%, rgba(255,0,228,1) 80%, rgba(255,0,134,1) 90%, rgba(255,0,0,1) 100%);
     --rgb0: linear-gradient(0deg, rgba(255,252,0,1) 0%, rgba(189,255,0,1) 10%, rgba(27,255,0,1) 20%, rgba(0,255,72,1) 30%, rgba(0,255,226,1) 40%, rgba(26,200,255,1) 50%, rgba(0,1,250,1) 60%, rgba(85,0,255,1) 70%, rgba(255,0,228,1) 80%, rgba(255,0,134,1) 90%, rgba(255,0,0,1) 100%);
     --rgb45: linear-gradient(45deg, rgba(255,252,0,1) 0%, rgba(189,255,0,1) 10%, rgba(27,255,0,1) 20%, rgba(0,255,72,1) 30%, rgba(0,255,226,1) 40%, rgba(26,200,255,1) 50%, rgba(0,1,250,1) 60%, rgba(85,0,255,1) 70%, rgba(255,0,228,1) 80%, rgba(255,0,134,1) 90%, rgba(255,0,0,1) 100%);
+    --radial: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    --blue-rose: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    --glass: rgba(255,255,255,0.1);
+    --rgb-lite: linear-gradient( 109.6deg,  rgba(247,253,166,1) 11.2%, rgba(128,255,221,1) 57.8%, rgba(255,128,249,1) 85.9% );
 
 }
+
 
 html {
     font-size: 62.5%; 
@@ -692,14 +694,6 @@ main *{
     justify-content: space-around;
     align-items: center;
 }
-
-.main__skills-information.dark{
-    background: var(--dark);
-}
-.main__skills-information.light{
-    background: var(--light);
-}
-
 .main__skills-title{
     width: 100%;
     height: 20%;
@@ -782,29 +776,233 @@ main *{
     object-fit: cover;
 }
 
-/*
-.card img.dark{
-    filter: invert(100%)
-}*/
-
 .card figcaption{
     font-size: 1.5rem;
     font-weight: 200;
     text-align: center;
 }
 
-@media (max-width: 800px){}
-@media (max-width: 450px){}
-
 /*!*************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/Portfolio.css ***!
   \*************************************************************************/
+.main__portfolio{
+    display: flex;
+    position: relative;
+    height: auto;
+    min-height: 100vh; 
+    width: 100%;
+    max-width: 3100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__portfolio::after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    content: '';
+    background: var(--blue-rose);
+    z-index: -1;
+}
+
+.main__portfolio-slider{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    min-height: 80%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px var(--shadow);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+}
+
+.main__portfolio-information{
+    position: relative;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-rows: repeat(35rem);
+    grid-template-columns: repeat(auto-fill,35rem);
+    grid-auto-flow: row dense;
+    padding: 2rem;
+}
+
+.main__portfolio-information figure{
+    background: red;
+    width: 35rem;
+    height: 35rem;
+    margin: auto;
+}
+
+.main__portfolio-text{
+    background: blue;
+    width: 35rem;
+    height: 35rem;
+    margin: auto;
+}
+
+
+#left,#right{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    opacity: 0;
+    z-index: 9;
+    border: none;
+}
+
+#left:hover,#right:hover{
+    opacity: 0.1;
+    
+}
+#left{
+    left: 0;
+}
+
+#right{
+    right: 0;
+}
+
+
 @media (max-width: 800px){}
 @media (max-width: 450px){}
 
 /*!***********************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/Contact.css ***!
   \***********************************************************************/
+.main__contact{
+    display: flex;
+    position: relative;
+    height: 100vh; 
+    width: 100%;
+    max-width: 3100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__contact-content{
+    margin: auto;
+    display: flex;
+    position: relative;
+    height:auto;
+    max-height: 600px;
+    max-width: 300px;
+    width: 40%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px var(--shadow);
+    border: 1px solid var(--shadow);
+    padding: 3rem 0 2rem 0;
+}
+
+.main__contact-content.light{
+    background: var(--light);
+}
+
+.main__contact-content.dark{
+    background: var(--dark);
+}
+
+.main__contact-content::after{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: var(--rgb45);
+    top:0;
+    content: ' ';
+    filter: blur(6px);
+    z-index:-1
+}
+
+.main__contact-content h2{
+    font-size: 3rem;
+    font-weight: 400;
+    opacity: .8;
+    text-align: center;
+    bottom: 10rem;
+}
+
+.main__contact-content form {
+    position: relative;
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.main__contact-content form p{
+    font-size: 1.2rem;
+    opacity: .9;
+    text-align: center;
+    background: var(--rgb-lite);
+    border-radius: 3px;
+    color: var(--dark)
+}
+
+.text{
+    height: 2.5rem;
+}
+
+.textarea{
+    resize: none;
+}
+
+.text, .textarea ,.submit{
+    border-radius: 3px;
+    border: none;
+    background:  none;
+    outline: none;
+    text-align: center;
+}
+.text::placeholder, .textarea::placeholder{
+   font-size: 1.5rem;
+}
+
+.text.light ,.textarea.light{
+    box-shadow: 2px 2px 5px var(--shadow-light1),
+    1px 1px 2px var(--shadow-light2);
+    border: .5px solid var(--shadow);
+}
+
+.text.dark ,.textarea.dark{
+    box-shadow: 2px 2px 5px var(--shadow-dark1),
+    1px 1px 2px var(--shadow-dark2);
+    border: .5px solid var(--shadow);
+}
+
+.submit{
+    border: .5px solid var(--shadow);
+    background: var(--rgb-lite);
+    font-size: 1.8rem;
+    color: var(--dark);
+}
+
+.submit.light{
+    box-shadow: 5px 5px 10px var(--shadow-light1);
+}
+.submit.dark{
+    box-shadow: 5px 5px 10px var(--shadow-dark1);
+}
+
+.submit:active {
+    box-shadow: none;
+}
+
+
+
 @media (max-width: 800px){}
 @media (max-width: 450px){}
 
