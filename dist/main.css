@@ -43,6 +43,12 @@
 html {
     font-size: 62.5%; 
     overflow-x: hidden;
+    width: 100vw;
+}
+
+#app{
+    width: 100vw;
+    height: auto;
 }
 
 *.dark { 
@@ -70,7 +76,7 @@ header{
     display: flex;
     grid-area: header;
     position:fixed;
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     top: 0;
     z-index: 999;
@@ -79,7 +85,7 @@ header{
 main {
     grid-area: main;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 1fr;
     top: 10vh;
     z-index:1;
@@ -89,19 +95,12 @@ footer{
     display: flex;
     grid-area: footer;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 12vh;
     top:10vh;
     z-index: 1;
 }
 
-@media (max-width: 800px){
-    
-}
-
-@media (max-width: 400px){
-    
-}
 /*!**********************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/Footer.css ***!
   \**********************************************************************/
@@ -574,30 +573,32 @@ main *{
 .main__aboutme{
     display: flex;
     position: relative;
-    height: 100vh; 
+    height:auto;
+    min-height: 100vh; 
     width: 100%;
-    max-width: 3100px;
+    max-width: 310rem;
     justify-content: center;
     align-items: center;
+    padding: 5rem 0 5rem 0;
 }
 
 
 .main__aboutme-information{
     margin: auto;
-    display: flex;
+    display: grid;
     position: relative;
-    height: 70%;
-    max-height: 300px;
-    max-width: 600px;
+    height:auto;
+    min-height: 70%;
+    max-width: 60rem;
     width: 60%;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     top: -2rem;
     border-radius: 5px;
     box-shadow: 0 1px 4px var(--shadow);
     border: 1px solid var(--shadow);
-    padding: 3rem 0 2rem 0;
+    gap: 3rem;
+    padding: 3rem;
 }
 
 .main__aboutme-information.dark{
@@ -620,6 +621,7 @@ main *{
 
 
 .main__aboutme-information h1{
+    margin: auto;
     display:flex;
     font-size: 4rem;
     font-weight: 500;
@@ -632,38 +634,49 @@ main *{
 }
 
 .main__aboutme-information h3{
-    width: 90%;
+    margin: auto;
     text-align: justify;
-    height: 60%;
-    font-size: 2rem;
+    height: auto;
+    font-size: 2.5rem;
     font-weight: 300;
 }
 
 .main__aboutme-information p{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     opacity: .7;
+    text-align: center;
+    margin: auto;
 }
 
 @media (max-width: 800px){
+    .main__aboutme-information{
+        gap: 2rem;
+        padding: 2rem;
+    }
+
     .main__aboutme-information h1{
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
     
     .main__aboutme-information h3{
-        font-size: 1.5rem;
-        width: 95%;
+        font-size: 2rem;
     }
     
     .main__aboutme-information p{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 }
 @media (max-width: 450px){
+    .main__aboutme-information{
+        gap: 1rem;
+        padding: 1rem;
+    }
+
     .main__aboutme-information h1{
         font-size: 2rem;
     }
     .main__aboutme-information h3{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .main__aboutme-information p{
@@ -688,13 +701,16 @@ main *{
     margin: auto;
     display: flex;
     position: relative;
-    height: 90%;
+    height: auto;
+    min-height: 100%;
     width: 90%;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding: 0 3rem 3rem 3rem;
 }
 .main__skills-title{
+    margin:auto;
     width: 100%;
     height: 20%;
     display: flex;
@@ -712,17 +728,25 @@ main *{
 }
 
 .main__skills-cards{
+    margin:auto;
     position:relative;
     display: grid;
-    width:60%;
-    height: 80%;
+    width:80%;
+    height: auto;
+    min-height: 90%;
     gap: 3rem;
-    padding: 2rem;
+    padding: 5rem 3rem 3rem 3rem;
     justify-content: space-around;
     align-items: center;
-    grid-template-rows: repeat(13rem);
     grid-template-columns: repeat(auto-fill,13rem);
     grid-auto-flow: row dense;
+}
+
+@media (max-width: 800px){
+    .main__skills-cards{
+        width:100%;
+        padding: 5rem 2rem 2rem 2rem;
+    }
 }
 
 /*!********************************************************************!*\
@@ -956,13 +980,13 @@ main *{
     display: flex;
     position: relative;
     height:auto;
-    max-height: 600px;
-    max-width: 300px;
-    width: 40%;
+    min-height: 36.4rem;
+    max-height: 60rem;
+    width: 30rem;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5px;
+    border-radius: .5rem;
     box-shadow: 0 1px 4px var(--shadow);
     border: 1px solid var(--shadow);
     padding: 3rem 0 2rem 0;
@@ -1020,6 +1044,7 @@ main *{
 }
 
 .text, .textarea ,.submit{
+    width: 100%;
     border-radius: 3px;
     border: none;
     background:  none;
@@ -1062,6 +1087,10 @@ main *{
 
 
 
+
+/*!********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/Home.css ***!
+  \********************************************************************/
 
 /*!************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/Error404.css ***!

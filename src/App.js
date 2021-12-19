@@ -9,7 +9,7 @@ import { ThemeProvider } from './contexts/ThemeContext';
 
 const App = () => {
     return (
-        <div>
+        <>
             <HashRouter>
                 <ThemeProvider>
                     <LanguageProvider>
@@ -21,7 +21,7 @@ const App = () => {
                     </LanguageProvider>
                 </ThemeProvider>
             </HashRouter>
-        </div>
+        </>
     )
 }
 

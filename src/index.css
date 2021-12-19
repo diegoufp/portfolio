@@ -40,6 +40,12 @@
 html {
     font-size: 62.5%; 
     overflow-x: hidden;
+    width: 100vw;
+}
+
+#app{
+    width: 100vw;
+    height: auto;
 }
 
 *.dark { 
@@ -67,7 +73,7 @@ header{
     display: flex;
     grid-area: header;
     position:fixed;
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     top: 0;
     z-index: 999;
@@ -76,7 +82,7 @@ header{
 main {
     grid-area: main;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 1fr;
     top: 10vh;
     z-index:1;
@@ -86,16 +92,8 @@ footer{
     display: flex;
     grid-area: footer;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 12vh;
     top:10vh;
     z-index: 1;
-}
-
-@media (max-width: 800px){
-    
-}
-
-@media (max-width: 400px){
-    
 }
