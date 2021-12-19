@@ -1,0 +1,53 @@
+.card{
+    width: 13rem;
+    height: auto;
+    position: relative;
+    display: flex;
+    z-index: 9;
+    border-radius: 5px;
+    
+}
+
+.card figure{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px var(--shadow);
+    border: 1px solid var(--shadow);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.card figure.dark{
+    background: var(--dark);
+}
+
+.card figure.light{
+    background: var(--light);
+}
+
+.card figure::after{
+    position: absolute;
+    width:calc(100% - 1rem);
+    height:calc(100% - 1rem);
+    background: var(--rgb45);
+    top:0;
+    content: ' ';
+    filter: blur(5px);
+    z-index:-1;
+}
+.card img{
+    padding: 1rem;
+    height: auto;
+    border-radius: 5px;
+    opacity: 0.9;
+    object-fit: cover;
+}
+
+.card figcaption{
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: center;
+}

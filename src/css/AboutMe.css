@@ -1,0 +1,113 @@
+.main__aboutme{
+    display: flex;
+    position: relative;
+    height:auto;
+    min-height: 100vh; 
+    width: 100%;
+    max-width: 310rem;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0 5rem 0;
+}
+
+
+.main__aboutme-information{
+    margin: auto;
+    display: grid;
+    position: relative;
+    height:auto;
+    min-height: 70%;
+    max-width: 60rem;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+    top: -2rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px var(--shadow);
+    border: 1px solid var(--shadow);
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.main__aboutme-information.dark{
+    background: var(--dark);
+}
+.main__aboutme-information.light{
+    background: var(--light);
+}
+
+.main__aboutme-information::after{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: var(--rgb45);
+    top:0;
+    content: ' ';
+    filter: blur(6px);
+    z-index:-1
+}
+
+
+.main__aboutme-information h1{
+    margin: auto;
+    display:flex;
+    font-size: 4rem;
+    font-weight: 500;
+    opacity: .8;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:15%;
+    text-align: center;
+}
+
+.main__aboutme-information h3{
+    margin: auto;
+    text-align: justify;
+    height: auto;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.main__aboutme-information p{
+    font-size: 1.8rem;
+    opacity: .7;
+    text-align: center;
+    margin: auto;
+}
+
+@media (max-width: 800px){
+    .main__aboutme-information{
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .main__aboutme-information h1{
+        font-size: 3rem;
+    }
+    
+    .main__aboutme-information h3{
+        font-size: 2rem;
+    }
+    
+    .main__aboutme-information p{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 450px){
+    .main__aboutme-information{
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .main__aboutme-information h1{
+        font-size: 2rem;
+    }
+    .main__aboutme-information h3{
+        font-size: 1.5rem;
+    }
+    
+    .main__aboutme-information p{
+        font-size: 1rem;
+    }
+}
