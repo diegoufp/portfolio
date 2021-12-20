@@ -3,7 +3,7 @@ import {HashRouter, Routes,Route} from "react-router-dom";
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
-import { BurgerProvider } from './contexts/BurgerContext';
+
 import { LanguageProvider } from './contexts/LanguageContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 
@@ -13,9 +13,7 @@ const App = () => {
             <HashRouter>
                 <ThemeProvider>
                     <LanguageProvider>
-                    <BurgerProvider>
                         <Header/>
-                    </BurgerProvider>
                         <Main/>
                         <Footer/>
                     </LanguageProvider>

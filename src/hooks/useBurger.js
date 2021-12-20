@@ -1,16 +1,16 @@
-import React,{createContext, useState } from "react";
+import {useState} from "react";
 
 
-const BurgerContext = createContext();
 
 const initialBurger= "unactivate";
 
-const BurgerProvider = ({children}) =>{
+export const useBurger = (ref) =>{
     const [burger, setBurger] = useState(initialBurger);
 
     const handleBoton = (e) =>{
         if(e.target){
             setBurger("unactivate");
+            ref.current.checked = false;
         }
     }
 
@@ -21,12 +21,7 @@ const BurgerProvider = ({children}) =>{
             setBurger("unactivate");
         }
     };
-    const data ={burger,handleBurger,handleBoton};
+    
 
-    return(
-        <BurgerContext.Provider value={data}>{children}</BurgerContext.Provider>
-    )
+    return {burger,handleBurger,handleBoton}
 };
-
-export {BurgerProvider};
-export default BurgerContext;
