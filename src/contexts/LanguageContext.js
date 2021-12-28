@@ -4,6 +4,22 @@ const LanguageContext = createContext();
 
 const initialLanguage = "en";
 
+const history = `Soy un apasionado por la tecnología, tengo más de tres años como desarrollador e incluso actualmente continúo expandiendo mi conocimiento sobre nuevas tecnologías de forma autodidacta.
+
+Inicie adentrándome al mundo de la programación aprendiendo python en un computador con sistema operativo linux , fue ahí donde me engancho totalmente el campo y decidí aprender mas lenguajes de programación.
+
+Actualmente ademas de python e experimentado con librerías como scrapyque me permitió tener un interés mas profundo hacia la web 2.0, a como limpiar y estructurar la información para poder almacenarla, así también obtuve el interés hacia las bases de datos y e iniciar aprendiendo Mysql.
+
+Ese fue mi acercamiento hacia el desarrollo sofware y despues de eso termine aprendiendo:
+
+GIT
+HTML
+CSS
+JAVASCRIPT
+WEBPACK
+REACT
+`
+
 const translations = {
     es:{
         language: "es", 
@@ -53,59 +69,55 @@ const slider = {
 
 const icons = {
     github: {
-        img: "../../public/icons/githubN.png",
+        img: "https://i.imgur.com/mhj0e4M.png",
         title: "GITHUB"
     },
     javascript: {
-        img: "../../public/icons/js.png",
+        img: "https://i.imgur.com/kzTybrt.png",
         title: "JAVASCRIPT"
     },
     python: {
-        img: "../../public/icons/PY.png",
+        img: "https://i.imgur.com/qOHa1PR.png",
         title: "PYTHON"
     },
     linux: {
-        img: "../../public/icons/LINUX.png",
+        img: "https://i.imgur.com/qOHa1PR_d.webp?maxwidth=760&fidelity=grand",
         title: "LINUX"
     },
     sql: {
-        img: "../../public/icons/sqlserver.png",
+        img: "https://i.imgur.com/o5Y18N1_d.webp?maxwidth=760&fidelity=grand",
         title: "SQL"
     },
-    pandas: {
-        img: "../../public/icons/pandas.png",
-        title: "PANDAS"
-    },
     html: {
-        img: "../../public/icons/html5.png",
+        img: "https://i.imgur.com/JkcS9k4.png",
         title: "HTML"
     },
     css: {
-        img: "../../public/icons/css.png",
+        img: "https://i.imgur.com/pa84wzE.png",
         title: "CSS"
     },
     react: {
-        img: "../../public/icons/REACT.png",
+        img: "https://i.imgur.com/GI2eV91.png",
         title: "REACT"
     },
     node: {
-        img:"../../public/icons/NODE.png",
+        img:"https://imgur.com/c3mOiSH",
         title:"NODE"
     },
     git: {
-        img:"../../public/icons/GITT.png",
+        img:"https://i.imgur.com/HEZ6Eko.png",
         title:"GIT"
     },
     docker: {
-        img:"../../public/icons/DOCKERINV.png",
+        img:"https://i.imgur.com/GYAM3SG_d.webp?maxwidth=760&fidelity=grand",
         title:"DOCKER"
     },
     sass: {
-        img:"../../public/icons/SAS.png",
+        img:"https://i.imgur.com/8hJ8wCK.png",
         title:"SASS"
     },
     mongo: {
-        img:"../../public/icons/MONGO.png",
+        img:"https://i.imgur.com/eK2x0n5_d.webp?maxwidth=760&fidelity=grand",
         title:"MONGO"
     }
 }
