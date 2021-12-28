@@ -8,7 +8,7 @@ const Skills = () => {
     const {theme} = useContext(ThemeContext);
     const {texts,icons} = useContext(LanguageContext);
     return (
-        <div className="main__skills">
+        <div className="main__skills" id="skills">
             <div className="main__skills-information">
                 <div className="main__skills-title">
                     <h2>{texts.skills}</h2>
@@ -22,10 +22,7 @@ const Skills = () => {
                     <Card img={icons.javascript.img} title={icons.javascript.title}/>
                     <Card img={icons.python.img} title={icons.python.title}/>
                     <Card img={icons.react.img} title={icons.react.title}/>
-                    {/*<Card img={icons.mongo.img} title={icons.mongo.title}/>*/}
                     <Card img={icons.sass.img} title={icons.sass.title}/>
-                    <Card img={icons.node.img} title={icons.node.title}/>
-                    <Card img={icons.docker.img} title={icons.docker.title}/>
                     <Card img={icons.git.img} title={icons.git.title}/>
                 </div>
             </div>
