@@ -30,7 +30,7 @@ const translations = {
         portfolio: "Portafolio",
         contact: "Contacto",
         home: "Inicio",
-        presentation:"Soy freelancer, apasionado por la tecnología, tengo más de tres años como desarrollador e incluso actualmente continúo expandiendo mi conocimiento sobre nuevas tecnologías de forma autodidacta",
+        presentation:"Soy un desarrollador web, apasionado por la tecnología, tengo más de tres años como desarrollador e incluso actualmente continúo expandiendo mi conocimiento sobre nuevas tecnologías de forma autodidacta",
         name:"Soy Diego Fernandez",
         stand: "Full Stack Developer",
         more:"Más"
@@ -44,7 +44,7 @@ const translations = {
         portfolio: "Portfolio",
         contact: "Contact",
         home: "Home",
-        presentation: "I am a freelancer, passionate about technology, I have more than three years as a developer and even currently I continue to expand my knowledge about new technologies autodidactically",
+        presentation: "I’m a web developer, passionate about technology, I have more than three years as a developer and even currently I continue to expand my knowledge about new technologies autodidactically",
         name: "I'm Diego Fernandez",
         stand: "Full Stack Developer",
         more:"More"
@@ -53,13 +53,13 @@ const translations = {
 
 const slider = {
     es:{
-        0:  {img:"../../public/img/slider/myweb.png",
+        0:  {img:"https://i.imgur.com/dRH6z3n.png",
             title:"Mi Portafolio",
             text:"El proyecto que es mi carta de presentación sin duda tiene que estar en mi portafolio de proyectos. En su código fuente se puede ver claramente cuanto se del tema y este portafolio ira creciendo en proporción a mis conocimientos y proyectos",
             git:"https://github.com/diegoufp/portfolio",more:""},
     },
     en:{
-    0:  {img:"../../public/img/slider/myweb.png",
+    0:  {img:"https://i.imgur.com/dRH6z3n.png",
         title:"My Portfolio",
         text:"The project that is my cover letter certainly has to be in my portfolio of projects. In its source code you can clearly see how much of the topic and this portfolio will be growing in proportion to my knowledge and projects",
         git:"https://github.com/diegoufp/portfolio",
