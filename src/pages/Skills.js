@@ -22,7 +22,7 @@ const Skills = () => {
                     <Card img={icons.javascript.img} title={icons.javascript.title}/>
                     <Card img={icons.python.img} title={icons.python.title}/>
                     <Card img={icons.react.img} title={icons.react.title}/>
-                    <Card img={icons.sass.img} title={icons.sass.title}/>
+                    <Card img={icons.mongo.img} title={icons.mongo.title}/>
                     <Card img={icons.git.img} title={icons.git.title}/>
                 </div>
             </div>
